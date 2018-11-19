@@ -1,0 +1,260 @@
+.radius{width: 30px; height: 30px; background-color: lightgray; border-radius: 30px;}
+#appNameList table{text-align: center;width: 100px;font-size: 18px;}
+
+.header-params{
+	height:28px;
+	padding:3px 8px;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom:5px;
+}
+
+.desk,.desk_02,.desk_03,.desk_04{
+    /*line-height: 120px;*/
+    text-align: center;
+    font-size: 24px;
+}
+
+a.button {
+			position: relative;
+			color: rgba(255,255,255,1);
+			height:80px;
+			text-decoration: none;
+			background-color: rgb(60, 141, 188);
+			font-family: 'Yanone Kaffeesatz';
+			font-weight: 700;
+			font-size: 1em;
+			display: block;
+			padding: 4px;
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			-webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+			-moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+			box-shadow: 0px 9px 0px rgb(54, 127, 169), 0px 9px 25px rgba(0,0,0,.7);
+			margin: 100px auto;
+			width: 160px;
+			text-align: center;
+			-webkit-transition: all .1s ease;
+			-moz-transition: all .1s ease;
+			-ms-transition: all .1s ease;
+			-o-transition: all .1s ease;
+			transition: all .1s ease;
+		}
+a.button:active{
+			-webkit-box-shadow: 0px 3px 0px rgba(249, 249, 249, 0.84), 0px 3px 6px rgba(0,0,0,.9);
+			-moz-box-shadow: 0px 3px 0px rgba(249, 249, 249, 0.84), 0px 3px 6px rgba(0,0,0,.9);
+			box-shadow: 0px 3px 0px rgba(249, 249, 249, 0.84), 0px 3px 6px rgba(0,0,0,.9);
+			position: relative;
+			top: 6px;
+		}
+		
+.sffunction{
+	width: 118px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 2px 2px 0;
+    border: 1px solid #DAD7D7;
+    text-align: center;
+    float: left;
+}
+.new-button{
+	/*background-image: url(../dist/image/up.png);*/
+    background-color: #00c0ef;
+    background-repeat: no-repeat;
+}
+
+.sfdiv{
+	width: 150px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 2px 2px 0;
+    border: 1px solid #DAD7D7;
+    text-align: center;
+    float: left;
+}
+
+.market-li{
+	width: 23.3%; 
+	margin-bottom: 1.5em; 
+	position: relative; 
+	margin-left: 14px; 
+	border-radius: 4px; 
+	background: white;
+	border: 1px solid #ccc;
+}
+
+.market-ul{
+	display: flex; 
+	flex-wrap: wrap; 
+	background: #F7F7F7; 
+	border-bottom: none; 
+	list-style: none; 
+	padding-left: 0; 
+	margin-bottom: 0;
+}
+.market-display{
+	height: 180px;
+    position: absolute;
+    width: 100%;
+    display: none;
+    background: rgba(0, 166, 90, 0.63);
+    color: white;
+    word-wrap:break-word;
+    overflow-y: auto;
+}
+.market-h3{
+	padding: 1.3rem 1.3rem 0.5rem 1.3rem; 
+	margin-top: 0; 
+	margin-bottom: 0; 
+	font-size: 15px; 
+	line-height: 22px; 
+	text-overflow: ellipsis; 
+	overflow: hidden; 
+	white-space: nowrap;
+}
+.market-p1{
+	color: #666; 
+	font-size: 12px; 
+	padding-left: 1.3rem;
+}
+
+.tabborder{
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #EEEEEE;
+	border-bottom: 1px solid #EEEEEE;
+	padding: 0px;
+}
+
+.sceneTypeDisplay{
+	height: 200px;
+    border: 1px solid;
+    color: #ccc;
+    overflow-y: auto;
+}
+
+
+.liStyle{
+	list-style-type: none;
+    color: black;
+    cursor:pointer
+}
+
+.div-line {
+	border: 1px solid #DDDDDD;
+	margin-top:10px;
+}
+.div-title{
+    text-align: center;
+    height: 32px;
+    line-height: 32px;
+    font-size: 20px;
+    background: #ADCEF9;
+}
+.div-ht{
+	line-height:32px;
+	height:32px;
+	font-weight: bold;
+	font-size: 18px;
+	
+}
+.div-error{
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #DDDDDD;
+    margin-bottom: 5px;
+    padding:0px;
+}
+.div-hide{
+	display: none;
+}
+
+.tablediv{
+	margin-bottom:15px
+}
+
+.table-label{
+	padding-left:0px;
+	text-left:left;
+	padding-top:7px;
+}
+
+.form-div-10{
+	width: 667px;
+    padding-left: 10px;
+}
+
+.index-ul{
+	color: #F9F9F9;
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    margin-bottom: 0px;
+    background: rgba(59, 59, 60, 0.53);
+}
+
+.index-li{
+	text-align: right !important ;
+    padding-right: 14px !important;
+    font-weight: bold;
+    color: #b8c7ce;
+}
+
+.request{
+	list-style: none;
+    height: 50px;
+    line-height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    padding:0 0 0 20px;
+}
+.interface-history{
+	border: 1px solid #CECDCD;
+	margin-top: 5px;
+	padding: 0px;
+}
+.interface-history-choice{
+	border: 1px solid #CECDCD;
+	margin-top: 5px;
+	padding: 0px;
+	background: #D9EDF7;
+}
+.inteface-history-type{
+	width: 30px;
+    height: 30px;
+    background: rgba(66, 140, 177, 0.61);
+    border-radius: 15px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: rgb(240, 245, 41);
+}
+.interface-history-title{
+	display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor:pointer;
+}
+
+.td-detail{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align:center;
+}
+
+.span-class{
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: 80%;
+}
+
+<!--生成苹果类型的开关 -->

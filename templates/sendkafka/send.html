@@ -1,0 +1,282 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>涅槃业务平台</title>
+<link href=" {%static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'css/bootstrapswitch.css'%}" rel="stylesheet" type="text/css" />
+<!-- 字体 -->
+<link href="{%static 'css/font-awesome.min.css'%}" rel="stylesheet" type="text/css" />
+<!-- table样式-->
+<link href="{%static 'css/bootstrap-table.min.css'%}" rel="stylesheet" type="text/css" />
+<!-- 自定义样式 -->
+<link href="{%static 'css/leech.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'css/uploadfile.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'css/componentDesign.css'%}" rel="stylesheet" type="text/css" />
+<!-- 下拉控件 -->
+<link href="{%static 'css/bootstrap-select.min.css'%}" rel="stylesheet" type="text/css"/>
+<link href="{%static 'css/template.css'%}" rel="stylesheet" type="text/css" />
+<link href="{%static 'css/bootstrap-datetimepicker.min.css'%}" rel="stylesheet" type="text/css" />
+<!-- codeMirror样式-->
+<link href="{%static 'css/common.css'%}" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- 左上角开头 -->
+<header class="header">
+    <div style="display:none" id="userNumber"></div>
+    <a class="logo" href="#">
+        <span class="logo-lg"><b><strong>涅槃业务平台</strong> </b></span>
+    </a>
+    <nav class="navbar navbar-static-top" role="navigation" style="min-height: 50px;"></nav>
+</header>
+<!-- 左边下拉框 -->
+<div class="wrapper row-offcanvas row-offcanvas-left">
+    <!-- 列表 -->
+    <aside class="left-side sidebar-offcanvas" style="min-height: 1000px;" >
+        <section class="sidebar">
+            <ul class="sidebar-menu" id="sidebar-menu">
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-facebook-square-ft"></i>
+                        <span>收件业务</span>
+                        <i class="fa fa-angle-left-ft pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <div class="convenientCollection Order" data-index="0" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">便捷代收</a></div>
+                        <div class="reverseLogistics Order" data-index="1" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">逆向物流</a></div>
+                        <div class="license Order" data-index="2" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">证照专递</a></div>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-facebook-square-ft"></i>
+                        <span>派件任务</span>
+                        <i class="fa fa-angle-left-ft pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <div class="investmentPromotionCigna Delivery" data-index="3" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">招商信诺</a></div>
+                        <div class="cod Delivery" data-index="4" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">代收货款</a></div>
+                        <div class="electronicAcceptance Delivery" data-index="5" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">电子验收</a></div>
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa fa-facebook-square-ft"></i>
+                        <span class="p">我要找人</span>
+                        <i class="fa fa-angle-left-ft pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <div class="convenientCollection Order" data-index="6" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">便捷代收</a></div>
+                        <div class="reverseLogistics Order" data-index="7" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">逆向物流</a></div>
+                        <div class="license Order" data-index="8" style="display: block;margin-left:25%;color: #f9f2f4;padding: 5px 5px 5px 5px;"><a href="javascript:">证照专递</a></div>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="sidebar-menu index-ul">
+                <li class=" index-li" style="cursor:pointer">&lt;&lt;</li>
+            </ul>
+        </section>
+    </aside>
+    <!-- 列表内容 -->
+    <aside class="right-side" id="content">
+        <section class="content-header" style="padding-top: 34px;">
+            <h1 id="main-page-header">涅槃欢迎您!</h1>
+        </section>
+        <div class="container-fluid">
+            <!-- 这里是一段Flash插件
+        <div class="tv" style="text-align: center;display: block;">
+            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=28,0,0,126" width="300" height="240">
+                <param name="movie" value="flvplayer.swf">
+                <param name="quality" value="high">
+                <param name="allowFullScreen" value="true">
+                <param name="FlashVars" value="vcastr_file=static/images/1234.flv&LogoText=http://www.sf-express.com&BufferTime=3&IsAutoPlay=1">
+                <embed src="/static/images/flvplayer.swf" allowfullscreen="true" flashvars="vcastr_file=static/images/1234.flv&LogoText=www.lanrentuku.com&IsAutoPlay=1" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="300" height="240"></embed>
+            </object>
+        </div>
+        -->
+            <!-- 收件 -->
+            <div class="test" style="display: block;text-align: center;">
+                <h3>便捷代收</h3>
+                <div>
+                    <label style="margin-right: 10px;">收派员: </label>
+                    <input style="color: #525252; height: 25px; width: 500px;line-height:15px;margin-bottom: 16px;margin-right: 1px;margin-top: 2px;outline: 0 none;" type="text" id="sgs_username1" value="" placeholder="请您输入工号">
+                </div>
+                <button class="btn" onclick="pickup()" style="background: #41a7c5">提交</button>
+                <div>
+                    <label>订单号:
+                        <div id="loading_pickup"></div>
+                        <canvas id="pickup"></canvas>
+                        <!-- <div id="waybillno"></div> --><!-- 这里是一个输入框 -->
+                    </label>
+                </div>
+            </div>
+            <div class="test" style="display: none;text-align: center;">
+                <h3>逆向物流</h3>
+                <div>
+                    <label style="margin-right: 10px;">收派员: </label>
+                    <input style="color: #525252; height: 25px; width: 500px;line-height:15px;margin-bottom: 16px;margin-right: 1px;margin-top: 2px;outline: 0 none;" type="text" id="sgs_username1" value="" placeholder="请您输入工号">
+                </div>
+                <button class="btn" onclick="pickup()" style="background: #41a7c5">提交</button>
+                <div>
+                    <label>订单号:
+                        <div id="loading_pickup"></div>
+                        <canvas id="pickup"></canvas>
+                        <!-- <div id="waybillno"></div> --><!-- 这里是一个输入框 -->
+                    </label>
+                </div>
+            </div>
+            <div class="test" style="display: none;text-align: center;">
+                <h3>证照专递</h3>
+                <div>
+                    <label style="margin-right: 10px;">收派员: </label>
+                    <input style="color: #525252; height: 25px; width: 500px;line-height:15px;margin-bottom: 16px;margin-right: 1px;margin-top: 2px;outline: 0 none;" type="text" id="sgs_username1" value="" placeholder="请您输入工号">
+                </div>
+                <button class="btn" onclick="pickup()" style="background: #41a7c5">提交</button>
+                <div>
+                    <label>订单号:
+                        <div id="loading_pickup"></div>
+                        <canvas id="pickup"></canvas>
+                        <!-- <div id="waybillno"></div> --><!-- 这里是一个输入框 -->
+                    </label>
+                </div>
+            </div>
+            <!-- 派件 -->
+            <div class="test" style="display: none;text-align: center;">
+                <h3>招商信诺</h3>
+                <div>
+                    <label style="margin-right: 10px;">收派员: </label>
+                    <input style="color: #525252; height: 25px; width: 500px;line-height:15px;margin-bottom: 16px;margin-right: 1px;margin-top: 2px;outline: 0 none;" type="text" id="sgs_username" value="" placeholder="请您输入工号">
+                </div>
+                <button class="btn" onclick="commit()" style="background: #41a7c5">提交</button>
+                <div>
+                    <label>运单号:
+                        <div id="loading"></div>
+                        <canvas id="waybillno"></canvas>
+                        <!-- <div id="waybillno"></div> --><!-- 这里是一个输入框 -->
+                    </label>
+                </div>
+            </div>
+            <div class="test" style="display: none;text-align: center;">
+                <h3>代收货款</h3>
+                <div>
+                    <label style="margin-right: 10px;">收派员: </label>
+                    <input style="color: #525252; height: 25px; width: 500px;line-height:15px;margin-bottom: 16px;margin-right: 1px;margin-top: 2px;outline: 0 none;" type="text" id="sgs_username" value="" placeholder="请您输入工号">
+                </div>
+                <button class="btn" onclick="commit()" style="background: #41a7c5">提交</button>
+                <div>
+                    <label>运单号:
+                        <div id="loading"></div>
+                        <canvas id="waybillno"></canvas>
+                        <!-- <div id="waybillno"></div> --><!-- 这里是一个输入框 -->
+                    </label>
+                </div>
+            </div>
+            <div class="test" style="display: none;text-align: center;">
+                <h3>电子验收</h3>
+                <div>
+                    <label style="margin-right: 10px;">收派员: </label>
+                    <input style="color: #525252; height: 25px; width: 500px;line-height:15px;margin-bottom: 16px;margin-right: 1px;margin-top: 2px;outline: 0 none;" type="text" id="sgs_username" value="" placeholder="请您输入工号">
+                </div>
+                <button class="btn" onclick="commit()" style="background: #41a7c5">提交</button>
+                <div>
+                    <label>运单号:
+                        <div id="loading"></div>
+                        <canvas id="waybillno"></canvas>
+                        <!-- <div id="waybillno"></div> --><!-- 这里是一个输入框 -->
+                    </label>
+                </div>
+            </div>
+            <!-- 我要找人 -->
+            <div class="test" style="display: none;text-align: center;"></div>
+        </div>
+    </aside>
+
+</div>
+</body>
+
+<script src="{% static 'jquery-3.2.1.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/bootstrap.js' %}" type="text/javascript"></script>
+<!-- 下拉框 -->
+<script src="{% static 'js/jquery.slimscroll.min.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/jquery-ui.js' %}" type="text/javascript"></script>
+<!-- 本身模板js -->
+<script src="{% static 'js/template.js' %}" type="text/javascript"></script>
+<!-- 条形码生成 -->
+<script src="{% static 'js/JsBarcode.all.min.js' %}" type="text/javascript"></script>
+<script type="text/javascript">
+    <!-- 显示隐藏 -->
+	$(document).ready(function(){
+	    $(".Order").click(function(){
+	        var index = $(this).attr('data-index');
+			$('.test').css('display', 'none');
+	        $('.test').eq(index).css('display', 'block');
+	    });
+        $(".Delivery").click(function(){
+	        var index = $(this).attr('data-index');
+			$('.test').css('display', 'none');
+	        $('.test').eq(index).css('display', 'block');
+	    });
+	});
+    <!-- ajax请求 -->
+    function gradeChange(){
+        var id = $("#host").val();
+        $("#msgHosts").val($("#host").find("option:selected").text());
+            $.ajax({
+                type: "get",
+                url: './host/'+id,
+                success: function (data) {
+                    var theme = data.theme;
+                    var code = data.code;
+                    $('#theme').val(theme);
+                    $('#code').val(code);
+                }
+            });
+       }
+    function commit() {
+        var delivery_res = $("#delivery").val();
+        var host = $("#msgHosts").val();
+        var kafkatheme = $("#theme").val();
+        var kafkacheckcode = $("#code").val();
+        var sgs_username = $("#sgs_username").val();
+        $.ajax({
+            url:'./delivery/',
+            type:"post",
+            data : {'hosts':host,'kafkatheme':kafkatheme,'kafkacheckcode':kafkacheckcode,'sgs_username':sgs_username},
+            beforeSend:function(XMLHttpRequest){
+                $("#loading").html('<img src="{% static "/images/loading.gif"%}" />'); //在后台返回success之前显示loading图标
+                $("#waybillno").empty();
+            },
+            success:function(result){
+                $("#loading").empty();
+                //这里是输入框
+                $("#waybillno").html('<input name="delivery" type="text" id="delivery" />');
+                $("#delivery").val(result["obj"][0]["waybillNo"]);
+                $("#waybillno").JsBarcode(result["obj"][0]["waybillNo"]);
+            }
+        });
+       }
+    function pickup() {
+        var delivery_res = $("#delivery").val();
+        var sgs_username = $("#sgs_username1").val();
+        $.ajax({
+            url:'./pickup/',
+            type:"post",
+            data : {'sgs_username':sgs_username},
+            beforeSend:function(XMLHttpRequest){
+                $("#loading_pickup").html('<img src="{% static "/images/loading.gif"%}" />'); //在后台返回success之前显示loading图标
+                $("#pickup_msg").empty();
+            },
+            success:function(result){
+                $("#loading_pickup").empty();
+                //这里是输入框
+                $("#pickup").html('<input name="pickup_msg" type="text" id="pickup_msg"/>');
+                $("#pickup_msg").val(result["status"]);
+                //$("#waybillno").JsBarcode(result["obj"][0]["waybillNo"]);
+            }
+        });
+       }
+</script>
+
+</html>
